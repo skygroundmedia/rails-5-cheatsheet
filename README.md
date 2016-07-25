@@ -101,7 +101,8 @@ rails g model vendor user:belongs_to first_name:string last_name:string gender:s
 
 ```
 
+Validate a Ranking
 ```language-powerbash
-
+validates_numericality_of :rating, :greater_than_or_equal_to => 0.0, :less_than_or_equal_to => 10.0
 ```
 
