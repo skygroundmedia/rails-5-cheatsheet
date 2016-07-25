@@ -1,18 +1,10 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * 
 
 Ruby Version 5.0
 
 * System dependencies
-
-Devise
-
 
 * Configuration
 
@@ -27,6 +19,10 @@ Devise
 * Deployment instructions
 
 # Commands
+
+
+
+---
 
 ### Create a new rails app
 
@@ -81,11 +77,12 @@ before_action :authenticate_user!
 ```
 
 ```language-powerbash
-
+#user:belongs_to could also be written user:references
+rails g model vendor user:belongs_to first_name:string last_name:string gender:string birthdate:date occuptation:string city:string state:string zip_code:string --force
 ```
 
 ```language-powerbash
-
+       rerun --dir config,app rails s
 ```
 
 ```language-powerbash
