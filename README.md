@@ -81,12 +81,24 @@ before_action :authenticate_user!
 rails g model vendor user:belongs_to first_name:string last_name:string gender:string birthdate:date occuptation:string city:string state:string zip_code:string --force
 ```
 
+### Controllers
+
+Create a vanilla home controller
 ```language-powerbash
-       rerun --dir config,app rails s
+rails g controller home index
 ```
 
-```language-powerbash
 
+### Tasks
+
+Run a server using a custom task
+```language-powerbash
+rails server:start
+```
+
+Custom task to wipe the database
+```language-powerbash
+rails db:wipe
 ```
 
 ```language-powerbash
